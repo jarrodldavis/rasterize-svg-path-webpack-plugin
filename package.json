@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin#readme"
+  "homepage": "https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin#readme",
+  "dependencies": {
+    "sharp": "^0.21.3"
+  }
 }
