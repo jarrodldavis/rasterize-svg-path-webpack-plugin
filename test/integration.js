@@ -13,10 +13,15 @@ const {
   INPUT_HEIGHT,
   INPUT_PATH,
   STROKE_COLOR,
-  FILL_COLOR,
-  OUTPUT_HEIGHT,
-  OUTPUT_WIDTH
+  FILL_COLOR
 } = require('./_constants');
+
+const OUTPUT_FORMAT = 'png';
+
+const REFERENCE_PATH_96 = path.join(__dirname, './reference-images/stroke-and-fill-96.png');
+const OUTPUT_PATH_96 = 'images/icon-96.png';
+const OUTPUT_WIDTH_96 = 96;
+const OUTPUT_HEIGHT_96 = 96;
 
 const readFile = util.promisify(fs.readFile);
 
@@ -69,19 +74,17 @@ describe('integration', function() {
   });
 
   it('emits single output file', async function() {
-    const reference = await readFile(path.join(__dirname, './reference-images/stroke-and-fill-96.png'));
-
-    const filePath = 'images/icon-96.png';
+    const reference = await readFile(REFERENCE_PATH_96);
 
     config.plugins.push(
       new RasterizeSvgPathWebpackPlugin(INPUT_PATH, INPUT_WIDTH, INPUT_HEIGHT, STROKE_COLOR, FILL_COLOR, [
-        { filePath, format: 'png', width: OUTPUT_WIDTH, height: OUTPUT_HEIGHT }
+        { filePath: OUTPUT_PATH_96, format: OUTPUT_FORMAT, width: OUTPUT_WIDTH_96, height: OUTPUT_HEIGHT_96 }
       ])
     );
 
     await run();
 
-    outputfs.should.have.file(path.join(config.output.path, filePath))
+    outputfs.should.have.file(path.join(config.output.path, OUTPUT_PATH_96))
             .which.pixelmatches(reference);
   });
 });
