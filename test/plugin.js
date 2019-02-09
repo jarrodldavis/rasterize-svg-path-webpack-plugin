@@ -48,10 +48,15 @@ describe('webpack plugin', function() {
   });
 
   it('taps into compiler emit hook', function() {
-    const compiler = webpack(WEBPACK_CONFIG);
+    const compiler = {
+      hooks: {
+        emit: {
+          tapPromise: sinon.spy()
+        }
+      }
+    }
 
     const plugin = new RasterizeSvgPathWebpackPlugin(INPUT_PATH, INPUT_WIDTH, INPUT_HEIGHT, STROKE_COLOR, FILL_COLOR, [OUTPUT]);
-    sinon.stub(compiler.hooks.emit, 'tapPromise');
     plugin.apply(compiler);
 
     compiler.hooks.emit.tapPromise
