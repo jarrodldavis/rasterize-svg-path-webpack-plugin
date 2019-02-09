@@ -4,7 +4,7 @@
   "description": "Rasterize SVG paths to various bitmap formats as part of a webpack build",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require should --require sharp"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,12 @@
   "homepage": "https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin#readme",
   "dependencies": {
     "sharp": "^0.21.3"
+  },
+  "devDependencies": {
+    "@mdi/js": "^3.4.93",
+    "mocha": "^5.2.0",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.3.3",
+    "should": "^13.2.3"
   }
 }

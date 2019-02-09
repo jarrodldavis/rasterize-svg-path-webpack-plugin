@@ -4,6 +4,9 @@ const sharp = require('sharp');
  * @typedef { 'png' | 'jpeg' | 'webp' | 'tiff' } RasterizeFormat A raster graphics (bitmap) image format.
  */
 
+
+const FALLBACK_COLOR_TRANSPARENT = 'rgba(0, 0, 0, 0)';
+
 /**
  * Rasterizes an SVG path (with stroke and/or fill colors) to various bitmap image formats.
  */
@@ -19,8 +22,8 @@ module.exports = class Rasterizer {
     this.pathData = pathData;
     this.inputWidth = inputWidth;
     this.inputHeight = inputHeight;
-    this.strokeColor = strokeColor;
-    this.fillColor = fillColor;
+    this.strokeColor = strokeColor || FALLBACK_COLOR_TRANSPARENT;
+    this.fillColor = fillColor || FALLBACK_COLOR_TRANSPARENT;
   }
 
   /**
