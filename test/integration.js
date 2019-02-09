@@ -69,7 +69,7 @@ describe('integration', function() {
   });
 
   it('emits single output file', async function() {
-    const reference = await readFile(path.join(__dirname, './reference-images/stroke-and-fill.png'));
+    const reference = await readFile(path.join(__dirname, './reference-images/stroke-and-fill-96.png'));
 
     const filePath = 'images/icon-96.png';
 

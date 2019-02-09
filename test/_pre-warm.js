@@ -14,12 +14,12 @@ before('pre-warm sharp', async function() {
 });
 
 before('pre-warm pngjs (sync)', function() {
-  const file = fs.readFileSync(path.join(__dirname, './reference-images/stroke-only.png'));
+  const file = fs.readFileSync(path.join(__dirname, './reference-images/stroke-only-96.png'));
   PNG.sync.read(file);
 });
 
 before('pre-warm pngjs (async) + pixelmatch', async function() {
-  const file = await readFile(path.join(__dirname, './reference-images/stroke-only.png'));
+  const file = await readFile(path.join(__dirname, './reference-images/stroke-only-96.png'));
   const png = new PNG();
   const parse = util.promisify(png.parse.bind(png));
   await parse(file);
