@@ -1,6 +1,6 @@
 {
   "name": "@jarrodldavis/rasterize-svg-path-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Rasterize SVG paths to various bitmap formats as part of a webpack build",
   "main": "index.js",
   "scripts": {
