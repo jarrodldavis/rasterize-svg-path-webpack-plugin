@@ -4,6 +4,9 @@ const sharp = require('sharp');
  * @typedef { 'png' | 'jpeg' | 'webp' | 'tiff' } RasterizeFormat A raster graphics (bitmap) image format.
  */
 
+/**
+ * Rasterizes an SVG path (with stroke and/or fill colors) to various bitmap image formats.
+ */
 module.exports = class Rasterizer {
   /**
    * @param {string} pathData The SVG path data that will be rasterized
@@ -21,7 +24,8 @@ module.exports = class Rasterizer {
   }
 
   /**
-   * Rasterizes the path to the given format scaled to the given dimensions.
+   * Rasterizes the SVG path represented by {@link Rasterizer#pathData} to the given format, scaled to the given
+   * dimensions.
    * @public
    * @param {RasterizeFormat} format The bitmap format to render to.
    * @param {number} outputWidth The width to scale the path to.
@@ -34,8 +38,8 @@ module.exports = class Rasterizer {
   }
 
   /**
-   * Generates an SVG document by scaling {@link Rasterizer#pathData} to the given output dimensions
-   * and applying {@link Rasterizer#strokeColor} and {@link Rasterizer#fillColor}.
+   * Generates an SVG document by scaling {@link Rasterizer#pathData} to the given output dimensions and applying
+   * {@link Rasterizer#strokeColor} and {@link Rasterizer#fillColor}, as appropriate.
    * @private
    * @param {number} outputWidth The width to scale the path to
    * @param {number} outputHeight The height to scale the path to.
@@ -55,9 +59,9 @@ module.exports = class Rasterizer {
   }
 
   /**
-   * Rasterizes a given SVG document to the given bitmap format.
+   * Rasterizes the SVG path represented by {@link Rasterizer#pathData} to the given bitmap format.
    * @private
-   * @param {string} svg An SVG document (i.e. as created by {@link RasterizeSvgPathWebpackPlugin#generateSvg}).
+   * @param {string} svg An SVG document (i.e. as created by {@link Rasterizer#generateSvg}).
    * @param {RasterizeFormat} format The bitmap format to render to.
    * @return {Buffer} The rasterized bitmap graphic.
    */
