@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@mdi/js": "^3.4.93",
+    "memory-fs": "^0.4.1",
     "mocha": "^5.2.0",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.3.3",
@@ -40,6 +41,7 @@
     "should": "^13.2.3",
     "should-sinon": "0.0.6",
     "sinon": "^7.2.3",
+    "verror": "^1.10.0",
     "webpack": "^4.29.3"
   },
   "peerDependencies": {
