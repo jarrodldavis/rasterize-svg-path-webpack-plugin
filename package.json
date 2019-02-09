@@ -19,8 +19,11 @@
     "vector",
     "vector-graphics",
     "bitmap",
+    "bitmap-graphics",
     "raster",
-    "rasterize"
+    "raster-graphics",
+    "rasterize",
+    "rasterizer"
   ],
   "author": "Jarrod Davis <developer@jarrodldavis.com>",
   "license": "MIT",
