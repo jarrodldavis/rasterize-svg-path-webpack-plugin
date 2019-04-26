@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Development and CI
 
--   Configuration of version bumps ([#1]), ([#3]), ([#4])
+-   Configuration of version bumps ([#1]), ([#3]), ([#4]), ([#5])
 
 ### Changed
 
@@ -44,6 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#3]: https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin/pull/3
 
 [#4]: https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin/pull/4
+
+[#5]: https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin/pull/5
 
 [Unreleased]: https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin/compare/v0.1.0...HEAD
 
