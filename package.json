@@ -46,6 +46,7 @@
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.4.0",
     "proxyquire": "^2.1.0",
+    "remark": "^10.0.1",
     "should": "^13.2.3",
     "should-sinon": "0.0.6",
     "sinon": "^7.3.2",
