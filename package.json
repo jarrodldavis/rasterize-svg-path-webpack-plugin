@@ -4,12 +4,7 @@
   "description": "Rasterize SVG paths to various bitmap formats as part of a webpack build",
   "main": "index.js",
   "scripts": {
-    "prepare": "git submodule update --init",
-    "test": "mocha --require should --require should-sinon",
-    "preversion": "./scripts/version-bump/run-preversion",
-    "version": "./scripts/version-bump/run-version",
-    "postversion": "./scripts/version-bump/run-postversion",
-    "mergeversion": "./scripts/version-bump/run-mergeversion"
+    "test": "mocha --require should --require should-sinon"
   },
   "repository": {
     "type": "git",
@@ -46,7 +41,6 @@
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.4.0",
     "proxyquire": "^2.1.0",
-    "remark-cli": "^6.0.1",
     "should": "^13.2.3",
     "should-sinon": "0.0.6",
     "sinon": "^7.3.2",
