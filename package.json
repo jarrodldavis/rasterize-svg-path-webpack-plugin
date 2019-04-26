@@ -1,10 +1,14 @@
 {
   "name": "@jarrodldavis/rasterize-svg-path-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rasterize SVG paths to various bitmap formats as part of a webpack build",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require should --require should-sinon"
+    "test": "mocha --require should --require should-sinon",
+    "preversion": "run-preversion",
+    "version": "run-version",
+    "postversion": "run-postversion",
+    "mergeversion": "run-mergeversion"
   },
   "repository": {
     "type": "git",
@@ -32,20 +36,21 @@
   },
   "homepage": "https://github.com/jarrodldavis/rasterize-svg-path-webpack-plugin#readme",
   "dependencies": {
-    "sharp": "^0.21.3"
+    "sharp": "^0.22.1"
   },
   "devDependencies": {
-    "@mdi/js": "^3.4.93",
+    "@jarrodldavis/version-scripts": "^0.1.0",
+    "@mdi/js": "^3.6.95",
     "memory-fs": "^0.4.1",
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "pixelmatch": "^4.0.2",
-    "pngjs": "^3.3.3",
+    "pngjs": "^3.4.0",
     "proxyquire": "^2.1.0",
     "should": "^13.2.3",
     "should-sinon": "0.0.6",
-    "sinon": "^7.2.3",
+    "sinon": "^7.3.2",
     "verror": "^1.10.0",
-    "webpack": "^4.29.3"
+    "webpack": "^4.30.0"
   },
   "peerDependencies": {
     "webpack": "^4.0.0"

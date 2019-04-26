@@ -1,0 +1,3 @@
+[submodule "scripts/version-bump"]
+	path = scripts/version-bump
+	url = git://github.com/jarrodldavis/npm-version-scripts.git
