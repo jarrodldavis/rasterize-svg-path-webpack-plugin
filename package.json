@@ -37,7 +37,7 @@
   "devDependencies": {
     "@mdi/js": "^3.6.95",
     "memory-fs": "^0.4.1",
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.4.0",
     "proxyquire": "^2.1.0",
