@@ -4,7 +4,11 @@
   "description": "Rasterize SVG paths to various bitmap formats as part of a webpack build",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require should --require should-sinon"
+    "test": "mocha --require should --require should-sinon",
+    "preversion": "run-preversion",
+    "version": "run-version",
+    "postversion": "run-postversion",
+    "mergeversion": "run-mergeversion"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,7 @@
     "sharp": "^0.22.1"
   },
   "devDependencies": {
+    "@jarrodldavis/version-scripts": "^0.1.0",
     "@mdi/js": "^3.6.95",
     "memory-fs": "^0.4.1",
     "mocha": "^6.1.4",
