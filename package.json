@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@jarrodldavis/version-scripts": "^0.1.0",
-    "@mdi/js": "^3.6.95",
+    "@mdi/js": "^4.5.95",
     "memory-fs": "^0.4.1",
     "mocha": "^6.1.4",
     "pixelmatch": "^5.0.2",
